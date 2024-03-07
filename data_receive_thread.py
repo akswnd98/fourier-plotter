@@ -11,9 +11,9 @@ class DataReceiveThread:
 
   def receive_continuousely (self):
     while True:
-      raw_data = self.ser.read(2)
+      raw_data = SerialContainer.ser.read(2)
       new_data = self.data_transformer.transform(raw_data)
-      if len(DataContainer.data) >= self.sample_num:
+      if len(DataContainer.data) >= SettingsContainer.sample_num:
         DataContainer.data = DataContainer.data[1: ] + [new_data]
       else:
         DataContainer.data += [new_data]
