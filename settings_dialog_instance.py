@@ -1,0 +1,2 @@
+class SettingsDialogInstance:
+  instance = None

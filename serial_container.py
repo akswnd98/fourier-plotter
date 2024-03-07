@@ -1,0 +1,2 @@
+class SerialContainer:
+  ser = None
